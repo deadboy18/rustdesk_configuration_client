@@ -55,6 +55,22 @@ The script includes several configurable options within the GUI:
 - **Password Management**: Generate and evaluate the strength of passwords.
 - **Default Settings**: Reset all settings to their defaults.
 
+### URLs Configuration
+
+Edit the following section in the `RustDeskConfig.ps1` script to include your own URLs for downloading the RustDesk clients:
+
+```powershell
+$urls = @{
+    "Windows exe" = "https://your-url-for-windows-exe"
+    "Windows installer bat" = "https://your-url-for-windows-installer-bat"
+    "Windows Installer powershell" = "https://your-url-for-windows-installer-powershell"
+    "Linux Installer" = "https://your-url-for-linux-installer"
+    "Mac Installer" = "https://your-url-for-mac-installer"
+}
+```
+
+Replace each URL with the appropriate link for your environment.
+
 ## Documentation
 
 For detailed documentation on RustDesk and its features, visit the [RustDesk Documentation](https://rustdesk.com/docs/en/).
@@ -77,3 +93,9 @@ For detailed documentation on RustDesk and its features, visit the [RustDesk Doc
 
 - If the GUI does not appear, ensure that PowerShell is running with sufficient permissions.
 - For issues related to downloading clients, verify your internet connection and the selected platform.
+
+## Just a prototype
+
+- For now all it does is download rustdesk different variants
+- In the future I will or someone will add the logic to code in the theme and password generation and setup
+- Hopefully there would be a better UI idk how to do it 
